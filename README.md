@@ -16,6 +16,7 @@ El objetivo es identificar tendencias, comparar comportamientos y evaluar la cor
 │   └── figures/         # Gráficos generados
 ├── src/                 # Scripts de utilidad
 └── README.md            # Este archivo
+```
 
 ## 📊 Datos
 
