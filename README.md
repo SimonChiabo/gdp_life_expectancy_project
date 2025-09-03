@@ -6,15 +6,16 @@ El objetivo es identificar tendencias, comparar comportamientos y evaluar la cor
 
 ## 📂 Estructura del proyecto
 
-├── data/ # Datos en bruto y procesados
-├── notebooks/ # Notebooks de análisis paso a paso
-│ ├── 00_load_data.ipynb
-│ ├── 05_eda.ipynb
-│ └── 06_conclusions.ipynb
+```text
+├── data/                # Datos en bruto y procesados
+├── notebooks/           # Notebooks de análisis paso a paso
+│   ├── 00_load_data.ipynb
+│   ├── 05_eda.ipynb
+│   └── 06_conclusions.ipynb
 ├── reports/
-│ └── figures/ # Gráficos generados
-├── src/ # Scripts de utilidad
-└── README.md # Este archivo
+│   └── figures/         # Gráficos generados
+├── src/                 # Scripts de utilidad
+└── README.md            # Este archivo
 
 ## 📊 Datos
 
@@ -60,10 +61,10 @@ El objetivo es identificar tendencias, comparar comportamientos y evaluar la cor
 ![Tendencias de esperanza de vida](reports/figures/life_expectancy_trends.png)
 
 ### Tendencias del PIB (índice base 2000)
-![PIB base 2000](reports/figures/gdp_index.png)
+![PIB base 2000](reports/figures/gdp_index_2000.png)
 
 ### Relación PIB vs Esperanza de Vida
-![Dispersión PIB vs Esperanza de Vida](reports/figures/gdp_life_scatter.png)
+![Dispersión PIB vs Esperanza de Vida](reports/figures/scatter_gdp_life.png)
 
 ## ✅ Conclusiones
 
@@ -94,5 +95,6 @@ Ejecutar los notebooks:
 bash
 Copiar código
 jupyter notebook
+
 ✍️ Autor: Simón Chiabo
 📌 Proyecto de portafolio – Ciencia de Datos / Análisis Económico
