@@ -62,7 +62,7 @@ El objetivo es identificar tendencias, comparar comportamientos y evaluar la cor
 ![Tendencias de esperanza de vida](reports/figures/life_expectancy_trends.png)
 
 ### Tendencias del PIB (índice base 2000)
-![PIB base 2000](reports/figures/gdp_index_2000.png)
+![PIB base 2000](reports/figures/GDP_index_2000.png)
 
 ### Relación PIB vs Esperanza de Vida
 ![Dispersión PIB vs Esperanza de Vida](reports/figures/scatter_gdp_life.png)
@@ -98,4 +98,5 @@ Copiar código
 jupyter notebook
 
 ✍️ Autor: Simón Chiabo
+
 📌 Proyecto de portafolio – Ciencia de Datos / Análisis Económico
