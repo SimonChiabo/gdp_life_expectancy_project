@@ -84,7 +84,7 @@ El objetivo es identificar tendencias, comparar comportamientos y evaluar la cor
 
 1. Clonar el repositorio:  
    ```bash
-   git clone <url-del-repo>
+   git clone https://github.com/SimonChiabo/gdp_life_expectancy_project
    cd gdp_life_expectancy_project
 Instalar dependencias:
 
