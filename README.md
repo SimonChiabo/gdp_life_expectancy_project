@@ -7,15 +7,19 @@ El objetivo es identificar tendencias, comparar comportamientos y evaluar la cor
 ## 📂 Estructura del proyecto
 
 ```text
-├── data/                # Datos en bruto y procesados
-├── notebooks/           # Notebooks de análisis paso a paso
-│   ├── 00_load_data.ipynb
-│   ├── 05_eda.ipynb
-│   └── 06_conclusions.ipynb
-├── reports/
-│   └── figures/         # Gráficos generados
-├── src/                 # Scripts de utilidad
-└── README.md            # Este archivo
+├── data/
+│   ├── raw/                 # all_data.csv (original)
+│   └── processed/           # datos limpios y con índices base 2000
+├── notebooks/
+│   ├── 00_load_data.ipynb   # carga y controles de calidad
+│   ├── 01_eda.ipynb         # EDA, correlaciones, índices y gráficos
+│   └── 02_analysis.ipynb    # conclusiones
+├── reports/figures/         # gráficos generados
+├── src/
+│   ├── data_processing.py   # carga, normalización y validación
+│   └── analysis.py          # correlaciones por país e índices base
+├── tests/                   # pytest
+└── README.md
 ```
 
 ## 📊 Datos
@@ -26,7 +30,7 @@ El objetivo es identificar tendencias, comparar comportamientos y evaluar la cor
   - `Country`: país  
   - `Year`: año  
   - `LifeExpectancy`: esperanza de vida al nacer (años)  
-  - `GDP`: Producto Bruto Interno (USD corrientes)  
+  - `GDP`: Producto Bruto Interno **total** (USD corrientes; no es per cápita)  
 
 ## 🔍 Metodología
 
@@ -69,10 +73,10 @@ El objetivo es identificar tendencias, comparar comportamientos y evaluar la cor
 
 ## ✅ Conclusiones
 
-- El crecimiento económico suele asociarse con **mejoras en salud y longevidad**.  
-- **China** ejemplifica cómo un fuerte crecimiento del PIB puede traducirse en un aumento sostenido de la esperanza de vida en poco tiempo.  
+- El PIB y la esperanza de vida **se mueven juntos** en los seis países; esto es una asociación, no prueba causalidad.  
+- **China** muestra un fuerte crecimiento del PIB junto con un aumento sostenido de la esperanza de vida en poco tiempo.  
 - **Zimbabwe** muestra que crisis sociales y sanitarias pueden interrumpir la relación positiva entre economía y salud.  
-- La correlación entre PIB y esperanza de vida es **muy fuerte en todos los países analizados**.  
+- La correlación entre PIB y esperanza de vida es **muy fuerte en todos los países analizados**. Ojo: son series temporales de solo 16 puntos por país y ambas tienden a crecer con el tiempo, por lo que parte de esa correlación es tendencia compartida.  
 
 ## 🚀 Próximos pasos
 
@@ -82,20 +86,20 @@ El objetivo es identificar tendencias, comparar comportamientos y evaluar la cor
 
 ## 🛠️ Cómo reproducir el análisis
 
-1. Clonar el repositorio:  
-   ```bash
-   git clone https://github.com/SimonChiabo/gdp_life_expectancy_project
-   cd gdp_life_expectancy_project
-Instalar dependencias:
-
-bash
-Copiar código
+```bash
+git clone https://github.com/SimonChiabo/gdp_life_expectancy_project
+cd gdp_life_expectancy_project
 pip install -r requirements.txt
-Ejecutar los notebooks:
+jupyter notebook          # ejecutar los notebooks en orden: 00 → 01 → 02
+```
 
-bash
-Copiar código
-jupyter notebook
+## ✅ Tests
+
+```bash
+pytest
+```
+
+Incluyen un test que recalcula las correlaciones del README a partir de los datos, para que lo publicado no se desincronice del análisis.
 
 ✍️ Autor: Simón Chiabo
 
